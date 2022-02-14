@@ -1,0 +1,68 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "dunglv2",
+    "password": "1111"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "flynn",
+    "password": "1111"
+}
+
+###
+
+POST http://localhost:5000/api/product/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWRhNTUyYWQzMDRhZWFiMzZiZmU2NWYiLCJpYXQiOjE2NDQ1NDk5NDZ9.3GIkwqM0Cae98fTsvCl2NImqVHon81CuQdNIW_WHjFs
+
+{
+    "name": "name2",
+    "description": "description1",
+    "price": 2,
+    "url": "url",
+    "quantity": 100,
+    "category": "61da4f2f18ef7d9fa3fa8f6e"
+}
+
+###
+GET http://localhost:5000/api/product/products
+Content-Type: application/json
+
+###
+GET http://localhost:5000/api/product/6205e07e2259e55ccb8e6c70
+Content-Type: application/json
+
+###
+PUT http://localhost:5000/api/product/update/6205e07e2259e55ccb8e6c70
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWRhNTUyYWQzMDRhZWFiMzZiZmU2NWYiLCJpYXQiOjE2NDQ1NDk5NDZ9.3GIkwqM0Cae98fTsvCl2NImqVHon81CuQdNIW_WHjFs
+
+{
+    "name": "mango",
+    "description": "mango is a great fruit",
+    "price": 200,
+    "url": "url",
+    "quantity": 100,
+    "category": "61da4f2f18ef7d9fa3fa8f6e"
+}
+
+###
+DELETE  http://localhost:5000/api/product/delete/6205e07e2259e55ccb8e6c70
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWRhNTUyYWQzMDRhZWFiMzZiZmU2NWYiLCJpYXQiOjE2NDQ1NDk5NDZ9.3GIkwqM0Cae98fTsvCl2NImqVHon81CuQdNIW_WHjFs
+
+###
+
+POST http://localhost:5000/api/category/add
+Content-Type: application/json
+
+{
+    "name": "",
+    "description": "fruit is healthy"
+}
