@@ -2,8 +2,9 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "dunglv2",
-    "password": "1111"
+    "username": "dunglv123",
+    "password": "1111",
+    "role": "ADMIN"
 }
 
 ###
@@ -17,13 +18,23 @@ Content-Type: application/json
 }
 
 ###
+PUT http://localhost:5000/api/auth/edit
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWRhNTUyYWQzMDRhZWFiMzZiZmU2NWYiLCJpYXQiOjE2NDQ1NDk5NDZ9.3GIkwqM0Cae98fTsvCl2NImqVHon81CuQdNIW_WHjFs
+
+{
+    "username": "flynnn",
+    "password": "1234"
+}
+
+###
 
 POST http://localhost:5000/api/product/add
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWRhNTUyYWQzMDRhZWFiMzZiZmU2NWYiLCJpYXQiOjE2NDQ1NDk5NDZ9.3GIkwqM0Cae98fTsvCl2NImqVHon81CuQdNIW_WHjFs
 
 {
-    "name": "name2",
+    "name": "name3",
     "description": "description1",
     "price": 2,
     "url": "url",
